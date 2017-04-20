@@ -7,14 +7,14 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by jorgeotero on 4/19/17.
  */
 public class UserTest {
 
-    private Board boardA;
+    private Board board;
     private User userA;
     private User userB;
     private Question questionA;
@@ -25,9 +25,9 @@ public class UserTest {
 
     @Before
     public void setUp() throws Exception {
-        boardA = new Board("Test");
-        userA = new User(boardA, "userA");
-        userB = new User(boardA, "userB");
+        board = new Board("Test");
+        userA = new User(board, "userA");
+        userB = new User(board, "userB");
         questionA = userA.askQuestion("questionA");
         answerB = userB.answerQuestion(questionA, "answerB");
     }
