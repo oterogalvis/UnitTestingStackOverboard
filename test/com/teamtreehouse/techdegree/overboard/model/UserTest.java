@@ -26,8 +26,8 @@ public class UserTest {
     @Before
     public void setUp() throws Exception {
         board = new Board("Test");
-        userA = new User(board, "userA");
-        userB = new User(board, "userB");
+        userA = board.createUser("userA");
+        userB = board.createUser("userB");
         questionA = userA.askQuestion("questionA");
         answerB = userB.answerQuestion(questionA, "answerB");
     }
