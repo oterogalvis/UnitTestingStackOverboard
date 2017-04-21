@@ -111,4 +111,11 @@ public class UserTest {
 
         userB.acceptAnswer(answerB);
     }
+
+    @Test
+    public void acceptAnswerFromAuthorOfQuestion() throws Exception {
+        userA.acceptAnswer(answerB);
+
+        assertEquals("Verify the answer is accepted.", true, answerB.isAccepted());
+    }
 }
