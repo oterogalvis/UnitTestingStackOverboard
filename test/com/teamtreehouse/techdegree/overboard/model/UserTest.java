@@ -14,14 +14,13 @@ import static org.junit.Assert.assertEquals;
  */
 public class UserTest {
 
+    @Rule
+    public ExpectedException expectedException = ExpectedException.none();
     private Board board;
     private User userA;
     private User userB;
     private Question questionA;
     private Answer answerB;
-
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
 
     @Before
     public void setUp() throws Exception {
